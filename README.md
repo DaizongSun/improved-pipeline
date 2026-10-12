@@ -2,7 +2,7 @@
 
 A comprehensive automated pipeline for cell segmentation, fluorescence quantification, and analysis from microscopy images.
 
-## 📋 Overview
+## Overview
 
 This pipeline automates the complete workflow for analyzing fluorescent microscopy images:
 1. Cell segmentation using Cellpose (deep learning)
@@ -10,7 +10,7 @@ This pipeline automates the complete workflow for analyzing fluorescent microsco
 3. ROI extraction and visualization
 4. Data aggregation and quality control
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -60,7 +60,7 @@ That's it! The pipeline will automatically:
 - Process each image through the complete pipeline
 - Combine results into a master CSV
 
-## 📁 Required Directory Structure
+## Required Directory Structure
 
 Your data should be organized as:
 
@@ -87,7 +87,7 @@ BASE_PATH/
 - Image folders can be ANY name (1, 2, 3, 44, 1[CAR], etc.)
 - Each image folder should contain your channel TIF files
 
-## 🔧 Configuration Options
+## Configuration Options
 
 ### Channel Names (all channels are combined)
 
@@ -120,7 +120,7 @@ PARAMS = {
 }
 ```
 
-## 📊 Pipeline Steps
+## Pipeline Steps
 
 The pipeline executes these steps for each image:
 
@@ -161,7 +161,7 @@ Three versions created:
 - Combines all channels into single CSV per image
 - Merges all images into master CSV
 
-## 📈 Output Files
+## Output Files
 
 ### Per-Image Outputs
 
@@ -195,7 +195,7 @@ BASE_PATH/
 └── cell_classifications.csv              # Quality control labels (if performed)
 ```
 
-## 📊 Output CSV Format
+## Output CSV Format
 
 `all_samples_combined.csv` contains:
 
@@ -222,7 +222,7 @@ BASE_PATH/
 
 **Note:** Median intensity is now included alongside mean for more robust measurements!
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Error: "No image found"
 
@@ -274,7 +274,7 @@ pip uninstall pyimagej scyjava
 pip install pyimagej scyjava
 ```
 
-## 🔍 Quality Control
+## Quality Control
 
 ### Interactive Cell Sorter
 
@@ -304,7 +304,7 @@ python produce_figures/plot_all_intensity_histograms.py
 
 This creates histograms showing median intensity distributions across all cells for each channel.
 
-## 📝 Advanced Usage
+## Advanced Usage
 
 ### Process Single Image
 
@@ -351,34 +351,34 @@ To change from white to black background (or vice versa), the pipeline creates b
 
 Both are automatically generated during pipeline execution.
 
-## 🎯 Key Features
+## Key Features
 
-### ✨ Centralized Configuration
+### Centralized Configuration
 - Edit channel names in ONE place (`main.py`)
 - All scripts automatically adapt
 - No need to edit 14+ files individually
 
-### 🤖 Fully Automated
+### Fully Automated
 - Auto-discovers all samples and images
 - Handles any image folder naming (1, 2, 44, 1[CAR], etc.)
 - Processes everything end-to-end
 
-### 📊 Robust Measurements
+### Robust Measurements
 - Both mean and median intensities
 - Multiple morphological features
 - Shrunk ROIs for cleaner boundaries
 
-### 🔍 Quality Control
+### Quality Control
 - Interactive cell sorter GUI
 - Visual verification tools
 - Raw crops for manual inspection
 
-### 💾 Organized Output
+### Organized Output
 - Hierarchical directory structure
 - Master combined CSV
 - Individual channel CSVs preserved
 
-## 🤝 Support
+## Support
 
 If you encounter issues:
 
@@ -389,16 +389,16 @@ If you encounter issues:
 
 For bugs or feature requests, please open an issue.
 
-## 📚 Citation
+## Citation
 
 If you use this pipeline in your research, please cite:
 - **Cellpose**: Stringer, C., Wang, T., Michaelos, M. & Pachitariu, M. Cellpose: a generalist algorithm for cellular segmentation. *Nat Methods* 18, 100–106 (2021).
 
-## 📄 License
+## License
 
 [Add your license information here]
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Cellpose** for deep learning segmentation
 - **ImageJ/Fiji** for image processing
